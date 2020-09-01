@@ -33,7 +33,7 @@ class Profile(models.Model):
         likes = self.like_set.all()
         total_liked = 0
         for item in likes:
-            if item.value == 'like':
+            if item.value == 'Like':
                 total_liked += 1
         return total_liked
 
