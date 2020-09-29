@@ -11,6 +11,10 @@ posts
         <div class="eleven wide column">
             {% for obj in qs %}
                 <div class="ui fluid card">
+
+                    {%  if obj.image %}
+                        <img src= "{{ obj.image.url }}" style="height: 50em; width: 100%">
+                    {% endif %}
                     <div class="content">
                        {{obj.content}}
                     </div>

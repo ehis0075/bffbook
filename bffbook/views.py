@@ -1,12 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def home_view(request):
-    user = request.user
-    hello = 'hello world'
-
-    context = {
-        'user_t': user,
-        'hello': hello,
-    }
-    return render(request, 'main/home.html', context)
+    return redirect('posts:main_post_view')
