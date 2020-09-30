@@ -1,4 +1,4 @@
-"""bffbook URL Configuration
+"""blackcommunity URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -22,7 +22,6 @@ from .views import home_view
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('account.urls')),
-
     path('admin/', admin.site.urls),
     path('', home_view, name='home-view'),
     path('profiles/', include('profiles.urls', namespace='profiles')),
